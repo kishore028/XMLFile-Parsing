@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>XML Result</title>
+</head>
+<body>
+<h2 th:text="${message}"></h2>
+
+<div th:if="${downloadAvailable}">
+    <a th:href="@{/download}" target="_blank">Download Processed XML</a>
+</div>
+
+<br>
+<a href="/">Upload Another File</a>
+</body>
+</html>
