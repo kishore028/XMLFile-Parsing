@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Word XML</title>
+</head>
+<body>
+<h2>Upload Word XML File</h2>
+<form method="POST" enctype="multipart/form-data" th:action="@{/process}">
+    <input type="file" name="file" accept=".xml" required />
+    <button type="submit">Upload & Process</button>
+</form>
+</body>
+</html>
