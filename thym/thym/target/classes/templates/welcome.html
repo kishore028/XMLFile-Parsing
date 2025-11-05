@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>welcome page</title>
+</head>
+<body>
+  <h1 th:text="'Hello, ' + ${name}">Default</h1>
+  <p th:if="${age >= 18}">You are adult</p>
+  <p th:if="${age <= 18}">You are not an adult</p>
+  <ul>
+   <li th:each="item : ${items}" th:text="${item}"></li>
+</ul>
+<form th:action="@{/save}" th:object="${student}" method="post">
+<input type="text" th:field="*{name}" />
+    <input type="number" th:field="*{age}" />
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>
